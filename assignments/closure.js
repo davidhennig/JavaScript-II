@@ -4,9 +4,18 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function chicken(chickName) {
+  const lang1 = "clucking";
+  console.log(`${chickName} is the second biggest chicken in the world`);
+  function home(homeName) {
+    const food = "scraps";
+    console.log(`the most popular chicken in the ${homeName} eats ${food}`);
+  } // this closes the home
+  home("Barn");
+} // this closes the chicken
+chicken("Charlie");
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
-
 
 // ==== Challenge 2: Implement a "counter maker" function ====
 const counterMaker = () => {
@@ -31,3 +40,16 @@ const counterFactory = () => {
   // `increment` should increment a counter variable in closure scope and return it.
   // `decrement` should decrement the counter variable and return it.
 };
+
+// function chicken(chickName) {
+//   const color = "speckled-white";
+//   console.log(`i have a great ${chickName} it is ${color}`);
+//   function barn(lodge) {
+//     const food = "scraps";
+//     console.log(
+//       `${lodge} is the capital of and the national food is ${food} the national sport is ${color}`
+//     );
+//   } // this closes the chicken
+//   barn("Big Red Barn");
+// } // this closes the barn
+// Chicken("Charlie");
